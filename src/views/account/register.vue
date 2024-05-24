@@ -145,11 +145,11 @@ export default {
             <!-- /Logo -->
 
             <div class="mb-3 ">
-              <label for="username" class="form-label">Ism Familiya</label>
+              <label for="username" class="form-label">Full Name</label>
 
               <input v-model="auth.ism" type="text" class="form-control" id="username"
                      :class="{'invalid-input': v$.auth.ism.$error}"
-                     name="username" placeholder="Ismingizni kiriting" autofocus/>
+                     name="username" placeholder="Your full name" autofocus/>
 
               <div v-if="v$.auth.ism.$error" class="invalid-input-text">
                 {{ v$.auth.ism.$errors[0].$message }}
@@ -157,16 +157,16 @@ export default {
 
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label">Elektron pochta</label>
+              <label for="email" class="form-label">Email</label>
               <input v-model="auth.login" type="email" class="form-control"
                      :class="{'invalid-input': v$.auth.login.$error}"
-                     id="email" name="email" placeholder="example@mail.ru"/>
+                     id="email" name="email" placeholder="example@mail.com"/>
               <div v-if="v$.auth.login.$error" class="invalid-input-text">
                 {{ v$.auth.login.$errors[0].$message }}
               </div>
             </div>
             <div class="mb-3 form-password-toggle">
-              <label class="form-label" for="password">Parol</label>
+              <label class="form-label" for="password">Password</label>
               <div class="input-group input-group-merge">
                 <input v-model="auth.parol" :type="showPassword ? 'text' : 'password'"
                        id="password" class="form-control" name="password"
@@ -182,17 +182,17 @@ export default {
             </div>
             <div class="mb-3" v-if="isJobsLoaded">
               <select class="form-select" aria-label="Default select example" v-model="auth.kasblar_id">
-                <option selected disabled>Kasbni tanlang</option>
+                <option selected disabled>Choose your job</option>
                 <option v-for="job in jobsList" :value="job.id">{{ job.nomi }}</option>
               </select>
             </div>
-            <button @click="registerUser" class="btn btn-primary d-grid w-100">Ro'yhatdan o'tish</button>
+            <button @click="registerUser" class="btn btn-primary d-grid w-100">Sign up</button>
 
           </div>
         <p class="text-center">
-          <span class="me-2">Akkauntingiz bormi?</span>
+          <span class="me-2">If you have account go to </span>
           <router-link to="/auth/login" href="auth-register-basic.html">
-            <span>Sahifangizga kiring</span>
+            <span>Sign in</span>
           </router-link>
         </p>
         </div>

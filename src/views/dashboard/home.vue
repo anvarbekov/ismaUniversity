@@ -79,8 +79,17 @@ export default {
                     <div class="d-flex align-items-end row">
                       <div class="col-sm-7">
                         <div class="card-body">
-                          <h5 class="card-title text-primary">Invertizatsiyaga Xush kelibsiz 🎉</h5>
-                          <p class="mb-4"><span style="color: #696CFF; font-weight: 700;">ISMA (Axborot tizimlarini boshqarish oliy maktabi)</span> Latviyadagi yetakchi universitetlardan biri boʻlib, mamlakatdagi eng yaxshi 10 ta universitetdan biri hisoblanadi. Ushbu institutda tahsil olayotgan talabalarimiz har kuni yangi narsalarni kashf etadilar, Ispaniya, Gretsiya va Bolgariyaga tashrif buyurish imkonini beruvchi xalqaro amaliyot va amaliyotlarda faol qatnashadilar. Bundan tashqari, ular butun dunyo bo'ylab o'qish va sayohatni birlashtirgan Erasmus va Work and Travel dasturlarida qatnashadilar! ISMA talabasi bo'ling va haqiqiy talaba hayotini boshdan kechiring!</p>
+                          <h5 class="card-title text-primary">Welcome to Inversion system 🎉</h5>
+                          <p class="mb-4"><span style="color: #696CFF; font-weight: 700;">
+                            ISMA (Higher School of Information Systems Management)</span> 
+                            It is one of the leading universities in Latvia. 
+                             is one of the top 10 universities in the country. Our students studying in this institute 
+                             Discover something new every day, allowing you to visit Spain, Greece and Bulgaria 
+                             actively participate in international practices and practices. In addition, they study and travel around the world
+                              participate in the combined Erasmus and Work and Travel programs! Become an ISMA student and live a real student life 
+                              experience it!
+                            
+                            </p>
 
                         </div>
                       </div>
@@ -105,7 +114,7 @@ export default {
                         <div class="card-body">
                           <div class="card-title d-flex align-items-start justify-content-between">
                             <div class="">
-                              <span class="fw-semibold d-block mb-1"> Xonalar soni</span>
+                              <span class="fw-semibold d-block mb-1">Rooms</span>
                              
                             </div>
                             
@@ -119,7 +128,7 @@ export default {
                         <div class="card-body">
                           <div class="card-title d-flex align-items-start justify-content-between">
                             <div class="">
-                              <span class="fw-semibold d-block mb-1"> Jihozlar soni</span>
+                              <span class="fw-semibold d-block mb-1"> Furnitures </span>
                              
                             </div>
                             

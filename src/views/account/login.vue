@@ -113,7 +113,7 @@ export default {
             </div>
             <!-- /Logo -->
               <div class="mb-3">
-                <label for="email" class="form-label">Elektron pochta</label>
+                <label for="email" class="form-label">Email</label>
                 <input type="text" class="form-control" id="email" name="email-username"
                        v-model="user.login"
                        :class="{'invalid-input': v$.user.login.$error}"
@@ -125,7 +125,7 @@ export default {
               </div>
               <div class="mb-3 form-password-toggle">
                 <div class="d-flex justify-content-between">
-                  <label class="form-label" for="password">Parol</label>
+                  <label class="form-label" for="password">Password</label>
 
                 </div>
                 <div class="input-group input-group-merge">
@@ -143,13 +143,13 @@ export default {
               </div>
 
               <div class="mb-3">
-                <button @click="loginFunction" class="btn btn-primary d-grid w-100" type="submit">Kirish</button>
+                <button @click="loginFunction" class="btn btn-primary d-grid w-100" type="submit">Log In</button>
               </div>
 
             <p class="text-center">
-              <span class="me-2">Akkauntingiz yo'qmi?</span>
+              <span class="me-2">Do not have account?</span>
               <router-link to="/auth/register" href="auth-register-basic.html">
-                <span>Ro'yhatdan o'ting</span>
+                <span>Sign up</span>
               </router-link>
             </p>
           </div>

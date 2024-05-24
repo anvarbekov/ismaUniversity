@@ -138,7 +138,7 @@ export default {
         <div class="card-header d-flex justify-content-between">
           <h5 class="">Jihozlar</h5>
           <button type="button" class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#addRoomModal">
-            Jihozlar qo'shish  </button>
+            Add furniture  </button>
         </div>
         <!--    add room modal-->
 
@@ -147,18 +147,18 @@ export default {
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="addRoomModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5" id="addRoomModalLabel">Add furniture</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <label> Jihoz nomi </label>
+                <label> furniture name </label>
                 <input v-model="furniture.jihoz_nomi" type="text" class="form-control">
-                <label> Soni </label>
+                <label> Quantity </label>
                 <input v-model="furniture.soni" type="number" class="form-control">
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bekor qilish</button>
-                <button @click="createFurniture" type="button" class="btn btn-primary" data-bs-dismiss="modal">Saqlash</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button @click="createFurniture" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
               </div>
             </div>
           </div>
@@ -169,9 +169,9 @@ export default {
             <table class="table table-bordered">
               <thead>
               <tr>
-                <th>Jihoz nomi</th>
-                <th>Jihozlar soni</th>
-                <th>Tahrirlash</th>
+                <th>Furniture name</th>
+                <th>Furniture quantity</th>
+                <th>Edit</th>
               </tr>
               </thead>
               <tbody>
@@ -188,15 +188,15 @@ export default {
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" :id="'roomDeleteModalLabel_' + index">Xona O'chirish</h1>
+                          <h1 class="modal-title fs-5" :id="'roomDeleteModalLabel_' + index">Delete furniture</h1>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <h4> {{ room.jihoz_nomi }} ni xonani o'chirishni xoxlaysizmi?</h4>
+                          <h4> Are you sure to delete</h4>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yo'q</button>
-                          <button type="button" class="btn btn-primary" @click="deleteRoom(room.id)" data-bs-dismiss="modal">Ha</button>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                          <button type="button" class="btn btn-primary" @click="deleteRoom(room.id)" data-bs-dismiss="modal">Yes</button>
                         </div>
                       </div>
                     </div>

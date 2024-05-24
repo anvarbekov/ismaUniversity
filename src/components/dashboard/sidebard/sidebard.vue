@@ -45,31 +45,31 @@ export default {
       <li v-if="lokalUser.kasblar_id == '1'" class="menu-item" :class="this.$route.name === 'rooms' ? 'active':''">
         <router-link to="/rooms"  class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-layout"></i>
-          <div data-i18n="Layouts">Xonalar</div>
+          <div data-i18n="Layouts">Rooms</div>
         </router-link>
       </li>
       <li v-if="lokalUser.kasblar_id != '1'" class="menu-item" :class="this.$route.name === 'furniture' ? 'active':''">
         <router-link to="/furniture"  class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-layout"></i>
-          <div data-i18n="Layouts">Jihozlar</div>
+          <div data-i18n="Layouts">Furnitures</div>
         </router-link>
       </li>
       <li v-if="lokalUser.kasblar_id == '1'" class="menu-item" :class="this.$route.name === 'orders' ? 'active':''">
         <router-link to="/orders"  class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-layout"></i>
-          <div data-i18n="Layouts">Buyurtmalar</div>
+          <div data-i18n="Layouts">Orders</div>
         </router-link>
       </li>
       <li v-if="lokalUser.kasblar_id == '2'" class="menu-item" :class="this.$route.name === 'ordersAccountant' ? 'active':''">
         <router-link to="/orders-accountant"  class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-layout"></i>
-          <div data-i18n="Layouts">Buyurtmalar</div>
+          <div data-i18n="Layouts">Orders</div>
         </router-link>
       </li>
       <li v-if="lokalUser.kasblar_id != '1'" class="menu-item" :class="this.$route.name === 'ordersWarehouse' ? 'active':''">
         <router-link to="/orders-warehouse"  class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-layout"></i>
-          <div data-i18n="Layouts">Buyurtmalar</div>
+          <div data-i18n="Layouts">Orders</div>
         </router-link>
       </li>
 

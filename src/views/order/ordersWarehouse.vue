@@ -202,15 +202,16 @@ export default {
     <!-- Content -->
 
     <div class="container-xxl flex-grow-1 container-p-y">
-      <h4 class="fw-bold py-3 mb-4"> Xonalar </h4>
+      <h4 class="fw-bold py-3 mb-4"> Orders in Warehouse </h4>
 
       <!-- Basic Bootstrap Table -->
       <!-- Bordered Table -->
       <div class="card">
         <div class="card-header d-flex justify-content-between">
-          <h5 class="">Xonalar</h5>
-          <button type="button" class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#addRoomModal">
-            Xona qo'shish  </button>
+          <h5 class="">Orders in Warehouse</h5>
+          <!-- <button type="button" class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#addRoomModal">
+            Xona qo'shish  
+          </button> -->
         </div>
         <!--    add room modal-->
 
@@ -241,11 +242,11 @@ export default {
             <table class="table table-bordered">
               <thead>
               <tr>
-                <th>Kim tomonidan</th>
-                <th>Xona nomi, raqami</th>
-                <th>Jihoz nomi</th>
-                <th>Holati</th>
-                <th >Tahrirlash</th>
+                <th>Order owner</th>
+                <th>Room name, number</th>
+                <th>Furniture</th>
+                <th>Status </th>
+                <th>Edit</th>
               </tr>
               </thead>
               <tbody>
@@ -253,14 +254,15 @@ export default {
                 <td>  {{ room.kmt_ismi }} </td>
                 <td>{{ room.hona_nomi }} - {{room.hona_raqami}} </td>
                 <td>{{room.jihoz_nomi}} - {{room.buyutma_soni}} </td>
-                <td> <span v-if="room.holati === '0' "> Yaratildi </span>
-                  <span v-if="room.holati === '1'"> Omborxonada </span>
-                  <span v-if="room.holati === '2'"> Kafedraga jo'natildi </span>
-                  <span v-if="room.holati === '3'"> Bekor qilindi </span>
+                <td> 
+                  <span v-if="room.holati === '0'"> Accountant is checking </span>
+                  <span v-if="room.holati === '1'"> Warehouse checking </span>
+                  <span v-if="room.holati === '2'"> Sent to Room </span>
+                  <span v-if="room.holati === '3'">  Accountant canceled </span>
                 </td>
                 <td v-if="room.holati === '1'">
                   <button v-if="lokalUser.kasblar_id === '3'"  class="bg-success btn me-3 btn-sm" style="color: white"  @click="toggleOkayModal(room)" >
-                    Kafedraga jo'natish  </button>
+                    Sent to room  </button>
 
                   <!-- Okay modal -->
                   <div class="modal fade "
@@ -269,7 +271,7 @@ export default {
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" >Buyurtmani tasdiqlash</h1>
+                          <h1 class="modal-title fs-5" > Confirm order</h1>
                           <button type="button" @click="okayModalShow = false" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -281,8 +283,8 @@ export default {
                           </ul>
                         </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" @click="okayModalShow = false" data-bs-dismiss="modal">Yo'q</button>
-                          <button type="button" class="btn btn-primary"  @click="buyurtmaOkay(room)">Ha</button>
+                          <button type="button" class="btn btn-secondary" @click="okayModalShow = false" data-bs-dismiss="modal">No</button>
+                          <button type="button" class="btn btn-primary"  @click="buyurtmaOkay(room)">Yes</button>
                         </div>
                       </div>
                     </div>

@@ -203,15 +203,16 @@ export default {
     <!-- Content -->
 
     <div class="container-xxl flex-grow-1 container-p-y">
-      <h4 class="fw-bold py-3 mb-4"> Xonalar </h4>
+      <h4 class="fw-bold py-3 mb-4"> Rooms </h4>
 
       <!-- Basic Bootstrap Table -->
       <!-- Bordered Table -->
       <div class="card">
         <div class="card-header d-flex justify-content-between">
-          <h5 class="">Xonalar</h5>
-          <button type="button" class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#addRoomModal">
-            Xona qo'shish  </button>
+          <h5 class="">Rooms</h5>
+          <!-- <button type="button" class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#addRoomModal">
+            Add room  
+          </button> -->
         </div>
         <!--    add room modal-->
 
@@ -220,7 +221,7 @@ export default {
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="addRoomModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5" id="addRoomModalLabel">Add room</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -242,10 +243,10 @@ export default {
             <table class="table table-bordered">
               <thead>
               <tr>
-                <th>Kim tomonidan</th>
-                <th>Xona nomi, raqami</th>
-                <th>Jihoz nomi</th>
-                <th>Holati</th>
+                <th>Order owner</th>
+                <th>Room name, number</th>
+                <th>Furniture name</th>
+                <th>Status</th>
 
               </tr>
               </thead>
@@ -254,20 +255,20 @@ export default {
                 <td v-if="room.holati === '0'" >  {{ room.kmt_ismi }} </td>
                 <td v-if="room.holati === '0'">{{ room.hona_nomi }} - {{room.hona_raqami}} </td>
                 <td v-if="room.holati === '0'">{{room.jihoz_nomi}} - {{room.buyutma_soni}} </td>
-                <td v-if="room.holati === '0'"> <span v-if="room.holati === '0'"> Yaratildi</span>
-                     <span v-if="room.holati === '1'"> Omborxonaga </span>
-                     <span v-if="room.holati === '2'"> Kafedraga jo'natildi </span>
-                     <span v-if="room.holati === '3'"> Bekor qilindi </span>
+                <td v-if="room.holati === '0'"> <span v-if="room.holati === '0'"> Accountant is checking </span>
+                     <span v-if="room.holati === '1'"> Warehouse checking </span>
+                     <span v-if="room.holati === '2'"> Sent to Room </span>
+                     <span v-if="room.holati === '3'"> Accountant canceled </span>
                 </td>
               </tr>
               <tr v-for="(room, index) in furnitureList" :key="index" >
                 <td v-if="room.holati !== '0'">  {{ room.kmt_ismi }} </td>
                 <td v-if="room.holati !== '0'">{{ room.hona_nomi }} - {{room.hona_raqami}} </td>
                 <td v-if="room.holati !== '0'">{{room.jihoz_nomi}} - {{room.buyutma_soni}} </td>
-                <td v-if="room.holati !== '0'"> <span v-if="room.holati === '0'"> Yaratildi</span>
-                  <span v-if="room.holati === '1'"> Omborxonaga </span>
-                  <span v-if="room.holati === '2'"> Kafedraga jo'natildi </span>
-                  <span v-if="room.holati === '3'"> Bekor qilindi </span>
+                <td v-if="room.holati !== '0'"> <span v-if="room.holati === '0'"> Accountant is checking </span>
+                  <span v-if="room.holati === '1'"> Warehouse checking </span>
+                  <span v-if="room.holati === '2'"> Sent to Room  </span>
+                  <span v-if="room.holati === '3'"> Accountant canceled  </span>
                 </td>
 
               </tr>

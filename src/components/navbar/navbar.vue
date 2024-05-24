@@ -83,7 +83,7 @@ export default {
             <li>
               <button class="dropdown-item" @click="signOut">
                 <i class="bx bx-power-off me-2"></i>
-                <span class="align-middle">Tizimdan chiqsh</span>
+                <span class="align-middle">Log out</span>
               </button>
             </li>
           </ul>
