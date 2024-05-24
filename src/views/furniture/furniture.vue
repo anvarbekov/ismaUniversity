@@ -130,13 +130,13 @@ export default {
     <!-- Content -->
 
     <div class="container-xxl flex-grow-1 container-p-y">
-      <h4 class="fw-bold py-3 mb-4"> Jihozlar </h4>
+      <h4 class="fw-bold py-3 mb-4"> FURNITURE  </h4>
 
       <!-- Basic Bootstrap Table -->
       <!-- Bordered Table -->
       <div class="card">
         <div class="card-header d-flex justify-content-between">
-          <h5 class="">Jihozlar</h5>
+          <h5 class="">FURNITURE </h5>
           <button type="button" class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#addRoomModal">
             Add furniture  </button>
         </div>
